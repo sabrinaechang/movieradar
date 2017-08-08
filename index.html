@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MovieRadar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="index.js"></script>
+		<style>
+		input[type=text] {
+    	width: 130px;
+    	box-sizing: border-box;
+    	border: 2px solid #ccc;
+    	border-radius: 4px;
+	    font-size: 16px;
+	    background-color: white;
+	    background-image: url('searchicon.png');
+	    background-position: 10px 10px;
+	    background-repeat: no-repeat;
+	    padding: 12px 20px 12px 40px;
+	    -webkit-transition: width 0.4s ease-in-out;
+	    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+
+
+			<!-- Header -->
+				<div id="header-wrapper" class="wrapper">
+					<div id="header">
+						<center><img src="movieradarlogo.png" alt="MovieRadar" style="width:500px;height:350px;"></center>
+
+						<!-- Logo -->
+							<div id="logo">
+								<p>An innovative way to find movies you like</p>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="index.html">Home</a></li>
+									<li>
+										<a href="#">Menu</a>
+										<ul>
+											<li><a href="#bob">Introduction</a></li>
+											<li><a href="#results">The Results</a></li>
+											<li><a href="#theaters">In Theaters</a></li>
+											<li><a href="#sally">About Us</a></li>
+
+										</ul>
+									</li>
+								</ul>
+							</nav>
+					</div>
+				</div>
+
+			<!-- Intro -->
+				<div id="intro-wrapper" class="wrapper style1">
+					<a name="bob"></a>
+					<div class="title">Introduction</div>
+					<section id="intro" class="container">
+						<p class="style1">So in case you were wondering what this is all about ...</p>
+						<p class="style2">
+							MovieRadar is a free responsive<br class="mobile-hide" />
+							site that recommends related movies </a>
+						</p>
+						<p class="style3">Type your favorite movie below, double-click search, go to results, and we will generate
+							top 10 movies that relate the most!
+						<ul class="actions">
+
+							<section>
+								<center><input id="movie"/>
+									<!-- link to another page: location.href='aftersubmit.html-->
+									<li><a href="#" class="button style1" onclick="displayInput();">Search</a></li>
+									<li><a href="#" class="button style1" onclick="getMovieInfo();">Go to Results</a></li>
+									<div class="row">
+										<div class="12u">
+											<ul class="actions">
+										</div>
+									</div>
+								</form>
+							</section>
+						</ul>
+					</section>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style2">
+					<a name="results"></a>
+					<div class="title">The Results</div>
+					<div id="main" class="container">
+
+						<!-- Features -->
+							<section id="features">
+								<header class="style1">
+									<h2>Top 10 recommended movies</h2>
+									<p>Based on your selected movie: <li><a href="#" class="button style2" onclick="clearResults()">Clear Results</a></li></p>
+								</header>
+
+								<div class="feature-list">
+									<div class="row">
+										<div class="6u 12u(mobile)">
+											<section>
+												<h3 id="first-movie-title" class="icon fa-check"></h3>
+												<p id="first-movie-description"></p>
+											</section>
+										</div>
+										<div class="6u 12u(mobile)">
+											<section>
+												<h3 id="second-movie-title" class="icon fa-check"></h3>
+												<p id="second-movie-description"></p>
+											</section>
+										</div>
+									</div>
+									<div class="row">
+										<div class="6u 12u(mobile)">
+											<section>
+												<h3 id="third-movie-title" class="icon fa-check"></h3>
+												<p id="third-movie-description"></p>
+										</div>
+										<div class="6u 12u(mobile)">
+											<section>
+												<h3 id="fourth-movie-title" class="icon fa-check"></h3>
+												<p id="fourth-movie-description"></p>
+											</section>
+										</div>
+									</div>
+									<div class="row">
+										<div class="6u 12u(mobile)">
+											<section>
+												<h3 id="fifth-movie-title" class="icon fa-check"></h3>
+												<p id="fifth-movie-description"></p>
+											</section>
+										</div>
+										<div class="6u 12u(mobile)">
+											<section>
+												<h3 id="sixth-movie-title" class="icon fa-check"></h3>
+												<p id="sixth-movie-description"></p>
+											</section>
+										</div>
+										<div class="row">
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 id="seventh-movie-title" class="icon fa-check"></h3>
+													<p id="seventh-movie-description"></p>
+												</section>
+											</div>
+											<div class="6u 12u(mobile)">
+												<section>
+													<h3 id="eighth-movie-title" class="icon fa-check"></h3>
+													<p id="eighth-movie-description"></p>
+												</section>
+											</div>
+											<div class="row">
+												<div class="6u 12u(mobile)">
+													<section>
+														<h3 id="ninth-movie-title" class="icon fa-check"></h3>
+														<p id="ninth-movie-description"></p>
+													</section>
+												</div>
+												<div class="6u 12u(mobile)">
+													<section>
+														<h3 id="tenth-movie-title" class="icon fa-check"></h3>
+														<p id="tenth-movie-description"></p>
+													</section>
+												</div>
+												<li><a href="#" class="button style1" onclick="clearResults()">Clear Results</a></li>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul class="actions actions-centered">
+								</ul>
+							</section>
+
+					</div>
+				</div>
+				<div class="wrapper style1">
+					<a name="theaters"></a>
+					<div class="title">In Theaters</div>
+					<div id="highlights" class="container">
+						<div class="row 150%">
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<h3><a href="#">Aliquam diam consequat</a></h3>
+									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<ul class="actions">
+										<li><a href="#" class="button style1" onclick="getGenres()">Get Genres</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<ul class="actions">
+										<li><a href="#" class="button style1" onclick="getGenres()">getNewGenres</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<h3><a href="#">Mattis tempus lorem</a></h3>
+									<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+									<ul class="actions">
+										<li><a href="#" class="button style1">Learn More</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Highlights -->
+				<div class="wrapper style3">
+					<a name="sally"></a>
+					<div class="title">About Us</div>
+					<div id="highlights" class="container">
+						<div class="row 150%">
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<a href="#" class="image featured"><img src="IMG_9089copy.jpg" alt="ugs" /></a>
+									<h3><a href="#">Shannon Chau</a></h3>
+									<p>Hi! I'm a rising senior at Mission San Jose High School in Fremont. I value my family the most, and movies are a big part of our family bonding time, so Sabrina and I wanted to create a website that would recommend related movies, both in theaters and not. </p>
+									<ul class="actions">
+										<section>
+											<h3 class="icon fa-envelope">Email</h3>
+											<p>
+												<a href="#">chaushannon@gmail.com</a>
+											</p>
+										</section>
+										<section>
+											<h3 class="icon fa-comment">Social</h3>
+											<p>
+												<a href="#">linkedin.com/shannon-chau</a><br />
+											</p>
+										</section>
+									<!-- <li><a href="#" class="button style1">Learn More</a></li> -->
+									</ul>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+									<a href="#" class="image featured"><img src="FullSizeRendercopy.jpg" alt="" /></a>
+									<h3><a href="#">Sabrina Chang</a></h3>
+									<p>I am currently a senior at Basis Independent Silicon Valley. Having always been interested in film, I wanted to create a website that helps others find related movies.  </p>
+									<ul class="actions">
+										<section>
+											<h3 class="icon fa-envelope">Email</h3>
+											<p>
+												<a href="#">sabrinaechang@gmail.com</a>
+											</p>
+										</section>
+										<section>
+											<h3 class="icon fa-comment">Social</h3>
+											<p>
+												<a href="#">linkedin.com/sabrinaechang</a><br />
+											</p>
+										</section>
+										<!-- <li><a href="#" class="button style1">Learn More</a></li> -->
+									</ul>
+								</section>
+							</div>
+							<div class="4u 12u(mobile)">
+								<section class="highlight">
+
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<!-- Scripts -->
+
+			<script type="text/javascript" src="movies.js"></script
+			<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+				<!-- Load JQuery -->
+				<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+				<!-- Load JQuery Mobile -->
+			<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
