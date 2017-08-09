@@ -15,7 +15,6 @@ function displayInput() {
   query = document.getElementById("movie").value;
   query = checkQuery(query);
   generateLink(query);
-  
 }
 
 function firstMovie(){
@@ -176,8 +175,9 @@ function getNewGenres(){ //getting all the new movie's genres
       }
 
       for (var i = 0; i < newGenres.length; i++){
-        console.log(newGenres[i]['1']); //access the keys of the newgenres
+
       }
+      console.log(newGenres[0]['1']); //access the keys of the newgenres
     }
   });
   compareMovieID();
